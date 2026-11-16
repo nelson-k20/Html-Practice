@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+</head>
+<body>
+    <h1>Images</h1>
+
+    <img src="idli.jpg" alt="Idli" width="300" height="200" loading="lazy">
+
+    <figure>
+        <img src="dosa.jpg" alt="Dosa" width="300" height="200">
+        <figcaption>Crispy Dosa</figcaption>
+    </figure>
+
+    <picture>
+        <source media="(min-width: 800px)" srcset="dosa.jpg">
+        <source media="(min-width: 400px)" srcset="idli.jpg">
+        <img src="idli.jpg" alt="Food" width="300" height="200">
+    </picture>
+
+    <img src="idli.jpg" alt="Food map" usemap="#foodmap" width="300" height="200">
+    <map name="foodmap">
+        <area shape="rect" coords="0,0,150,200" href="about.html" alt="Left">
+        <area shape="circle" coords="225,100,50" href="index.html" alt="Right">
+    </map>
+</body>
+</html>

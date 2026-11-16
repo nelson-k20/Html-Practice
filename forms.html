@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+            <legend>Your Details</legend>
+
+            <p><label for="name">Name:</label>
+               <input type="text" id="name" name="name" required minlength="3" maxlength="30"></p>
+
+            <p><label for="email">Email:</label>
+               <input type="email" id="email" name="email" required></p>
+
+            <p><label for="password">Password:</label>
+               <input type="password" id="password" name="password" minlength="6"></p>
+
+            <p><label for="phone">Phone:</label>
+               <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"></p>
+
+            <p><label for="url">Website:</label>
+               <input type="url" id="url" name="url"></p>
+
+            <p><label for="search">Search:</label>
+               <input type="search" id="search" name="search"></p>
+
+            <p><label for="dob">Date:</label>
+               <input type="date" id="dob" name="dob"></p>
+
+            <p><label for="time">Time:</label>
+               <input type="time" id="time" name="time"></p>
+
+            <p><label for="age">Age:</label>
+               <input type="number" id="age" name="age" min="1" max="100"></p>
+
+            <p><label for="range">Spice:</label>
+               <input type="range" id="range" name="range" min="0" max="10" value="5"></p>
+
+            <p><label for="color">Colour:</label>
+               <input type="color" id="color" name="color"></p>
+
+            <p><label for="photo">Photo:</label>
+               <input type="file" id="photo" name="photo" accept="image/*"></p>
+
+            <p><input type="hidden" name="secret" value="123"></p>
+
+            <p><label for="city">City:</label>
+               <select id="city" name="city">
+                   <option value="">--Select--</option>
+                   <optgroup label="Tamil Nadu">
+                       <option value="chennai">Chennai</option>
+                       <option value="coimbatore">Coimbatore</option>
+                   </optgroup>
+                   <optgroup label="Kerala">
+                       <option value="kochi">Kochi</option>
+                   </optgroup>
+               </select></p>
+
+            <p><label for="fruit">Fruit:</label>
+               <input list="fruits" id="fruit" name="fruit">
+               <datalist id="fruits">
+                   <option value="Mango">
+                   <option value="Banana">
+                   <option value="Apple">
+               </datalist></p>
+
+            <p><label for="message">Message:</label><br>
+               <textarea id="message" name="message" rows="6" cols="30" maxlength="200"></textarea></p>
+
+            <p><input type="checkbox" id="agree" name="agree" required>
+               <label for="agree">I agree</label></p>
+
+            <p><input type="radio" id="male" name="gender" value="male">
+               <label for="male">Male</label>
+               <input type="radio" id="female" name="gender" value="female">
+               <label for="female">Female</label></p>
+        </fieldset>
+
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+        <button type="button">Just Button</button>
+    </form>
+
+    <p>Progress: <progress value="70" max="100">70%</progress></p>
+    <p>Meter: <meter value="0.7">70%</meter></p>
+    <output>Result will appear here.</output>
+</body>
+</html>
